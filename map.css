@@ -1,0 +1,362 @@
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+#head {
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+#bo1 {
+  width: 15%;
+  height: 100%;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#axiom {
+  width: 100px;
+  height: 30px;
+}
+#bo2 {
+  box-sizing: border-box;
+  width: 75%;
+  height: 100%;
+  background-color: #ececec;
+  display: flex;
+  padding: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+#bo3 {
+  width: 10%;
+  height: 100%;
+  background-color: #ececec;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-left: 1px solid rgb(185, 182, 182);
+}
+#img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+p {
+  font-size: large;
+  font-weight: bolder;
+  color: #919189;
+}
+h3 {
+  color: #919189;
+  font-size: 17;
+  font-weight: lighter;
+}
+#setting {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fas {
+  font-size: 18px;
+
+  color: #919189;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#dashboard {
+  background-color: #ececec;
+  width: 15%;
+  height: 100%;
+}
+#item-list {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.items {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.items:hover .fas,
+.items:hover h3 {
+  color: rgb(57, 79, 206);
+}
+
+#viewDiv {
+  position: relative;
+
+  height: 100%;
+  width: 87%;
+}
+#snap {
+  position: absolute;
+  top: 28%;
+  left: 1%;
+}
+.scrollSection {
+  overflow: scroll;
+  width: inherit;
+  height: 300px;
+  overflow-x: hidden;
+  padding: 0.3em;
+}
+
+#cog-box2 {
+  position: absolute;
+  top: 13%;
+  right: 1%;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+}
+#cog-box3 {
+  position: absolute;
+  top: 8%;
+  right: 1%;
+  display: none;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+}
+#cog-box4 {
+  position: absolute;
+  top: 18%;
+  right: 1%;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+}
+#cog-box5 {
+  position: absolute;
+  top: 23%;
+  right: 1%;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+}
+
+#select {
+  width: 200px;
+  min-height: 10px;
+  position: absolute;
+  text-align: center;
+  top: 13%;
+  right: -100%;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+  border-radius: 0px;
+  border: 1px solid rgb(165, 140, 140);
+}
+#cog-box:hover,
+#cog-box2:hover,
+#cog-box3:hover,
+#cog-box4:hover,
+#cog-box5:hover {
+  border: 1px solid rgb(154, 207, 138);
+}
+#select2 {
+  width: 200px;
+  min-height: 10px;
+
+  text-align: center;
+
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 1px rgb(131, 127, 127), -1px -1px 1px rgb(131, 127, 127);
+  border-radius: 0px;
+  border: 1px solid rgb(3, 3, 3);
+}
+#selectmap {
+  position: absolute;
+  display: none;
+
+  top: 13%;
+  right: 4%;
+}
+/* .option {
+  margin: 3px;
+  border-radius: 10px;
+  border: 1px solid green;
+
+  padding: 10px;
+} */
+#cog {
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  color: #919189;
+}
+#cog2 {
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  color: #919189;
+}
+#cog3,
+#cog4 {
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  color: #919189;
+}
+
+#measurements {
+  position: absolute;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  bottom: 14%;
+  left: 1%;
+}
+
+.tab {
+  position: absolute;
+  font-size: 0.7rem;
+  text-align: center;
+  width: 100px;
+
+  margin: 2px;
+  padding: 2px;
+  margin: 3px;
+  background-color: rgb(255, 255, 255);
+  border: 0.5px solid rgb(209, 206, 206);
+  box-shadow: 1px 1px 2px black;
+  cursor: pointer;
+}
+.tab:hover p {
+  transform: scale(1.1);
+}
+.tab:hover {
+  transform: scale(1.1);
+}
+.tab1 {
+  top: -10%;
+  right: 5%;
+  transition: 1s;
+  /* animation: tab 0.6s;
+  animation: tab2 0.3s; */
+}
+p {
+  padding: 0px;
+  margin: 0px;
+  transition: 0.4s;
+}
+.esri-interactive {
+  display: none;
+}
+.esri-attribution__powered-by {
+  display: none;
+}
+#measurements.esri-widget {
+  display: none;
+}
+
+.tab2 {
+  top: -10%;
+  right: 5%;
+  transition: 0.8s;
+}
+.tab3 {
+  top: -10%;
+  right: 5%;
+  transition: 0.6s;
+}
+.tab4 {
+  top: -10%;
+  right: 5%;
+  transition: 0.4s;
+}
+#sketchVM-controls {
+  width: 125%;
+  height: 300px;
+}
+#headingBlock {
+  padding-right: 2em;
+}
+#propPanel {
+  display: block;
+}
+.tooltiptext {
+  display: none;
+  width: 100px;
+  margin-right: 20px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: ppx;
+  padding: 2;
+
+  /* Position the tooltip */
+}
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltiptext1 {
+  position: absolute;
+  top: 5%;
+  right: 90%;
+
+  z-index: 1;
+}
+.tooltiptext2 {
+  position: absolute;
+  top: 9%;
+  right: 90%;
+
+  z-index: 1;
+}
+
+.tab1:hover .tooltiptext1,
+.tab2:hover .tooltiptext2 {
+  display: block;
+}
+#map {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 30%;
+  right: -100%;
+  overflow-y: scroll;
+  display: block;
+}
+#layer {
+  position: absolute;
+  width: 250px;
+
+  top: 30%;
+  left: 1%;
+}
