@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#login_button").addEventListener("click", (e) => {
     e.preventDefault();
     if (
-      document.getElementById("l_email").value === "rithi@gmail.com" &&
-      document.getElementById("l_password").value === "iamrithi2029"
+      document.getElementById("l_email").value === "tanyac" &&
+      document.getElementById("l_password").value === "123Axiom"
     ) {
       document.getElementById("l_email").value = "";
       document.getElementById("l_password").value = "";

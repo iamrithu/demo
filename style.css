@@ -25,6 +25,9 @@ body {
   border-radius: var(--border-radius);
   background: #ffffff;
 }
+.form__text {
+  display: none;
+}
 
 .container,
 .form__input,
