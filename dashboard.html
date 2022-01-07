@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="row1">
+      <div id="logo">
+        <img src="./download.png" id="image" />
+      </div>
+      <div id="nav">
+        <div class="menu" id="menu" onclick="save()">
+          <i class="fas fa-bars"> </i>
+        </div>
+        <div id="nav-user">
+          <div id="nav-setting">
+            <div class="nav-setting-icon">
+              <i class="far fa-plus-square" onclick="project()"></i>
+            </div>
+            <div class="nav-setting-icon">
+              <i class="fas fa-bell" id="bell">
+                <span id="alert"></span>
+              </i>
+            </div>
+            <div class="nav-setting-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+          </div>
+          <div id="user-icon">
+            <img src="./images.png" id="image2" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="row2">
+      <div id="slidbar">
+        <div class="nav-list dashboard active">
+          <div class="nav-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="nav-name name">
+            <p class="Active">Dashboard</p>
+          </div>
+        </div>
+
+        <div class="nav-list project">
+          <div class="nav-icon">
+            <i class="far fa-folder-open"></i>
+          </div>
+          <div class="nav-name">
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="nav-name">
+            <p>Customer</p>
+          </div>
+        </div>
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="nav-name">
+            <p>Tasks</p>
+          </div>
+        </div>
+
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="nav-name">
+            <p>Lead</p>
+          </div>
+        </div>
+
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <div class="nav-name">
+            <p>Sales</p>
+          </div>
+          <span></span>
+        </div>
+
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <div class="nav-name">
+            <p>Subscriptions</p>
+          </div>
+        </div>
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="far fa-comment-alt"></i>
+          </div>
+          <div class="nav-name">
+            <p>Support</p>
+          </div>
+        </div>
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-file"></i>
+          </div>
+          <div class="nav-name">
+            <p>Knowledgebase</p>
+          </div>
+        </div>
+
+        <div class="nav-list">
+          <div class="nav-icon">
+            <i class="fas fa-sliders-h"></i>
+          </div>
+          <div class="nav-name">
+            <p>Others</p>
+          </div>
+        </div>
+      </div>
+      <div id="container">
+        <iframe src="./map/map.html" frameborder="0" id="ifm"></iframe>
+      </div>
+    </div>
+    <div id="project">
+      <div id="carryBox">
+        <div id="cross">
+          <i class="fas fa-times-circle" onclick="cross()"></i>
+        </div>
+
+        <text id="heading">Create A New Project</text>
+        <div class="box">
+          <label>Project Name</label>
+          <input id="project_name" type="text" placeholder="Project Neme" />
+        </div>
+        <div class="box">
+          <label> Base Map</label>
+          <select id="select">
+            <option value="">Choose Map</option>
+            <option value="arcgis-topographic">ArcGIS-Topograohic</option>
+            <option value="arcgis-imagery">ArcGIS-imagery</option>
+            <option value="topo-vector">Topo-vector</option>
+            <option value="streets-navigation-vector">Navigation</option>
+          </select>
+        </div>
+        <button id="btn">Create</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    var width = true;
+    var ifram = document.getElementById("ifm");
+    var img = document.getElementById("image");
+    var logo = document.getElementById("logo");
+    var nav = document.getElementById("nav");
+    var slidbar = document.getElementById("slidbar");
+    var nav_list = document.querySelectorAll(".nav-list");
+    var container = document.getElementById("container");
+    var nav_name = document.querySelectorAll(".nav-name");
+    var nav_icon = document.querySelectorAll(".nav-icon");
+
+    for (const button of nav_list) {
+      button.addEventListener("click", function (e) {
+        let overlay = document.createElement("span");
+        let left = e.clientX - button.getBoundingClientRect().left;
+        let top = e.clientY - button.getBoundingClientRect().top;
+        overlay.style.cssText = `
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top:${top}px;
+        left:${left}px;
+        transform: translate(-50%,-50%);
+        background-color: rgba(90, 191, 238,0.4);
+        z-index:-1;
+        border-radius:50% ;
+        opacity: 1;
+        animation:button_animation 0.4s ease;
+        `;
+
+        overlay.addEventListener("animationend", (e) => {
+          e.target.remove();
+        });
+        button.appendChild(overlay);
+      });
+    }
+    for (var i = 0; i < nav_list.length; i++) {
+      nav_list[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+
+    function save() {
+      if (width === true) {
+        width = false;
+        // logo.style.transition = "0.3s";
+
+        logo.style.width = "5.1%";
+        slidbar.style.width = "5%";
+        img.setAttribute("src", "./download (1).png");
+        img.style.width = "70%";
+        img.style.height = "70%";
+        for (var i = 0; i < nav_name.length; i++) {
+          nav_name[i].style.display = "none";
+          nav_icon[i].style.width = "100%";
+        }
+      } else {
+        width = true;
+        logo.style.width = "14.1%";
+        slidbar.style.width = "14%";
+        img.style.width = "80%";
+        img.style.height = "80%";
+        img.setAttribute("src", "./download.png");
+
+        for (var i = 0; i < nav_name.length; i++) {
+          nav_name[i].style.display = "block";
+
+          nav_icon[i].style.width = "32%";
+        }
+      }
+
+      let overlay = document.createElement("span");
+      let left = e.clientX - button.getBoundingClientRect().left;
+      let top = e.clientY - button.getBoundingClientRect().top;
+      overlay.style.cssText = `
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top:${top}px;
+        left:${left}px;
+        transform: translate(-50%,-50%);
+        background-color: rgba(90, 191, 238,0.4);
+        z-index:-1;
+        border-radius:50% ;
+        opacity: 1;
+        animation:button_animation 0.4s ease;
+        `;
+
+      overlay.addEventListener("animationend", (e) => {
+        e.target.remove();
+      });
+      document.getElementById("menu").appendChild(overlay);
+    }
+
+    function project() {
+      document.getElementById("project").style.display = "flex";
+    }
+    function cross() {
+      document.getElementById("project").style.display = "none";
+    }
+
+    document.getElementById("btn").addEventListener("click", () => {
+      document.getElementById("project").style.display = "none";
+    });
+
+    //dashboard
+
+    document.querySelector(".dashboard").addEventListener("click", () => {
+      ifram.setAttribute("src", "./map/map.html");
+    });
+
+    // //project
+
+    // document.querySelector(".project ").addEventListener("click", () => {
+    //   ifram.setAttribute("src", "../dashboard/screen/user/project.html");
+    // });
+  </script>
+</html>

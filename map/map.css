@@ -5,109 +5,12 @@ body {
   padding: 0px;
   margin: 0px;
 }
-#head {
-  box-sizing: border-box;
-  width: 100%;
-  height: 10%;
-  display: flex;
-}
-#bo1 {
-  width: 15%;
-  height: 100%;
-  background-color: #ececec;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#axiom {
-  width: 100px;
-  height: 30px;
-}
-#bo2 {
-  box-sizing: border-box;
-  width: 75%;
-  height: 100%;
-  background-color: #ececec;
-  display: flex;
-  padding: 0px 10px;
-  justify-content: space-between;
-  align-items: center;
-}
-#bo3 {
-  width: 10%;
-  height: 100%;
-  background-color: #ececec;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-left: 1px solid rgb(185, 182, 182);
-}
-#img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-p {
-  font-size: large;
-  font-weight: bolder;
-  color: #919189;
-}
-h3 {
-  color: #919189;
-  font-size: 17;
-  font-weight: lighter;
-}
-#setting {
-  width: 100px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.fas {
-  font-size: 18px;
-
-  color: #919189;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-#container {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-#dashboard {
-  background-color: #ececec;
-  width: 15%;
-  height: 100%;
-}
-#item-list {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.items {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-}
-
-.items:hover .fas,
-.items:hover h3 {
-  color: rgb(57, 79, 206);
-}
 
 #viewDiv {
   position: relative;
 
   height: 100%;
-  width: 87%;
+  width: 100%;
 }
 #snap {
   position: absolute;

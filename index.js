@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("l_password").value = "";
       document.getElementById("l_email").style.border = "1px solid green";
       document.getElementById("l_password").style.border = "1px solid green";
-      window.location.href = "map.html";
+      window.location.href = "./dashboard.html";
     } else {
       document.getElementById("l_email").value = "";
       document.getElementById("l_password").value = "";

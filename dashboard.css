@@ -1,0 +1,371 @@
+html,
+body {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#row1 {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 11%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.274);
+}
+
+#logo {
+  box-sizing: border-box;
+  width: 14.1%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  border-right: 0.5px solid rgba(128, 128, 128, 0.274);
+}
+#image {
+  width: 80%;
+  height: 80%;
+}
+
+#nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  position: relative;
+  margin-left: 20px;
+  height: 100%;
+  font-size: 20px;
+  color: #787f91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav-user {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#nav-setting {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-setting-icon {
+  width: 20%;
+
+  height: 100%;
+  font-size: 16px;
+  color: #787f91;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-icon {
+  width: 13%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.5px solid rgba(128, 128, 128, 0.274);
+}
+#image2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#row2 {
+  width: 100%;
+  height: 89%;
+
+  display: flex;
+}
+#slidbar {
+  width: 14%;
+  height: 100%;
+  border-right: 0.5px solid rgba(128, 128, 128, 0.274);
+  transition: 0.2s;
+}
+.active {
+  border-left: 3px solid rgb(90, 191, 238);
+}
+
+.nav-list {
+  width: 100%;
+  height: 8%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  z-index: 1;
+}
+@keyframes button_animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  3% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.nav-list:hover .nav-icon,
+.nav-list:hover .nav-name,
+.menu:hover,
+.nav-setting-icon:hover {
+  color: rgb(7, 169, 245);
+}
+.nav-list:hover {
+  background-color: rgba(194, 180, 180, 0.26);
+}
+
+.nav-icon {
+  width: 32%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #787f917c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6;
+}
+.nav-name {
+  color: #090a0c70;
+  width: 50%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.6;
+}
+
+.nav-name p {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+h3 {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: aqua;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+#ifm {
+  width: 100%;
+  height: 100%;
+}
+#project {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.4s;
+  background-color: rgba(4, 5, 5, 0.678);
+  z-index: 2;
+}
+#carryBox {
+  position: relative;
+  margin-top: 2%;
+  padding: 0px;
+  width: 30%;
+  min-height: 40%;
+  box-sizing: border-box;
+  top: 0px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 10px 10px 100px black;
+}
+label {
+  font-size: 13px;
+  margin-bottom: 5%;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  width: 80%;
+}
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgba(54, 54, 59, 0.658);
+  height: 20px;
+  margin-bottom: 5%;
+}
+
+select {
+  font-size: 13px;
+  height: 25px;
+  border-width: 0px;
+}
+select:focus {
+  outline: none;
+}
+#heading {
+  font-size: 17px;
+  margin: 5%;
+  color: rgb(121, 156, 156);
+}
+#btn {
+  padding: 1%;
+  width: 20%;
+  margin: 5%;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(18, 49, 116);
+  border-width: 0px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bolder;
+}
+#cross {
+  font-size: 20px;
+  color: rgb(107, 3, 3);
+  position: absolute;
+  height: 30px;
+  width: 30px;
+
+  top: -2%;
+  right: -2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cross:hover {
+  color: crimson;
+}
+
+#bell {
+  animation: ring 4s 0.7s ease-in-out infinite;
+  transform-origin: 50% 4px;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  }
+  1% {
+    transform: rotate(30deg);
+  }
+  3% {
+    transform: rotate(-28deg);
+  }
+  5% {
+    transform: rotate(34deg);
+  }
+  7% {
+    transform: rotate(-32deg);
+  }
+  9% {
+    transform: rotate(30deg);
+  }
+  11% {
+    transform: rotate(-28deg);
+  }
+  13% {
+    transform: rotate(26deg);
+  }
+  15% {
+    transform: rotate(-24deg);
+  }
+  17% {
+    transform: rotate(22deg);
+  }
+  19% {
+    transform: rotate(-20deg);
+  }
+  21% {
+    transform: rotate(18deg);
+  }
+  23% {
+    transform: rotate(-16deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  27% {
+    transform: rotate(-12deg);
+  }
+  29% {
+    transform: rotate(10deg);
+  }
+  31% {
+    transform: rotate(-8deg);
+  }
+  33% {
+    transform: rotate(6deg);
+  }
+  35% {
+    transform: rotate(-4deg);
+  }
+  37% {
+    transform: rotate(2deg);
+  }
+  39% {
+    transform: rotate(-1deg);
+  }
+  41% {
+    transform: rotate(1deg);
+  }
+
+  43% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#alert {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: crimson;
+}
