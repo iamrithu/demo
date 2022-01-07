@@ -108,6 +108,10 @@ body {
 .active {
   border-left: 3px solid rgb(90, 191, 238);
 }
+/* .active1,
+.active2 {
+  color: rgb(90, 191, 238);
+} */
 
 .nav-list {
   width: 100%;
