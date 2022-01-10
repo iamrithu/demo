@@ -41,7 +41,7 @@
     <script src="./map.js"></script>
   </head>
 
-  <body>
+  <body onload="remove()">
   
       <div id="viewDiv"></div>
       <div id="measurements"></div>
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <calcite-panel heading="SketchViewModel Styler" id="propPanel">
+    <calcite-panel  id="propPanel">
       <calcite-block id="headingBlock">
         <calcite-action
           icon="cursor"
@@ -133,7 +133,7 @@
           </calcite-label>
         </calcite-accordion-item>
         <!--- defaulteUpdateOptions -->
-        <calcite-accordion-item item-subtitle="defaultUpdateOptions">
+        <!-- <calcite-accordion-item item-subtitle="defaultUpdateOptions">
           <calcite-label
             >enableRotation
             <calcite-label layout="inline">
@@ -182,7 +182,7 @@
               False
             </calcite-label>
           </calcite-label>
-        </calcite-accordion-item>
+        </calcite-accordion-item> -->
         <!--- pointSymbol -->
         <calcite-accordion-item item-subtitle="pointSymbol">
           <div class="scrollSection">

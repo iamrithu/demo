@@ -1,5 +1,12 @@
 let value = false;
 
+function remove() {
+  let elem = document.getElementsByClassName("esri-basemap-gallery__item");
+  for (var i = 0; i < elem.length; i++) {
+    elem[i].title = "";
+  }
+}
+
 function reload() {
   document.getElementById("cog2").style.transform = "rotate(270deg)";
   document.getElementById("cog2").style.transition = "0.5s";
@@ -15,6 +22,7 @@ function back() {
   document.getElementById("tab4").style.top = "-10%";
   value = false;
 }
+
 require([
   "esri/config",
   "esri/Map",
@@ -83,11 +91,6 @@ require([
   const basemapGallery = new BasemapGallery({
     view: view,
     container: document.getElementById("map"),
-    source: {
-      query: {
-        title: '"World Basemaps for Developers" AND owner:esri',
-      },
-    },
   });
   const search = new Search({
     //Add Search widget
@@ -326,6 +329,10 @@ require([
     }
   });
 
+  function sample() {
+    alert("hi");
+  }
+
   pointBtn.onclick = (e) => {
     sketchVM.create("point");
   };
@@ -376,25 +383,25 @@ require([
     const aspectRatioSwitch = document.getElementById("aspectRatioSwitch");
 
     // set the UI elements to the default property values
-    rotationSwitch.switched = options.enableRotation;
-    scaleSwitch.switched = options.enableScaling;
-    multipleSelectionSwitch.switched = options.multipleSelectionEnabled;
-    aspectRatioSwitch.switched = options.preserveAspectRatio;
+    // rotationSwitch.switched = options.enableRotation;
+    // scaleSwitch.switched = options.enableScaling;
+    // multipleSelectionSwitch.switched = options.multipleSelectionEnabled;
+    // aspectRatioSwitch.switched = options.preserveAspectRatio;
 
     // event listeners for UI interactions
-    rotationSwitch.addEventListener("calciteSwitchChange", (evt) => {
-      sketchVM.defaultUpdateOptions.enableRotation = evt.target.switched;
-    });
-    scaleSwitch.addEventListener("calciteSwitchChange", (evt) => {
-      sketchVM.defaultUpdateOptions.enableScaling = evt.target.switched;
-    });
-    multipleSelectionSwitch.addEventListener("calciteSwitchChange", (evt) => {
-      sketchVM.defaultUpdateOptions.multipleSelectionEnabled =
-        evt.target.switched;
-    });
-    aspectRatioSwitch.addEventListener("calciteSwitchChange", (evt) => {
-      sketchVM.defaultUpdateOptions.preserveAspectRatio = evt.target.switched;
-    });
+    // rotationSwitch.addEventListener("calciteSwitchChange", (evt) => {
+    //   sketchVM.defaultUpdateOptions.enableRotation = evt.target.switched;
+    // });
+    // scaleSwitch.addEventListener("calciteSwitchChange", (evt) => {
+    //   sketchVM.defaultUpdateOptions.enableScaling = evt.target.switched;
+    // });
+    // multipleSelectionSwitch.addEventListener("calciteSwitchChange", (evt) => {
+    //   sketchVM.defaultUpdateOptions.multipleSelectionEnabled =
+    //     evt.target.switched;
+    // });
+    // aspectRatioSwitch.addEventListener("calciteSwitchChange", (evt) => {
+    //   sketchVM.defaultUpdateOptions.preserveAspectRatio = evt.target.switched;
+    // });
   }
 
   function setDefaultPointSymbol() {

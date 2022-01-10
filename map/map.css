@@ -27,7 +27,7 @@ body {
 
 #cog-box2 {
   position: absolute;
-  top: 13%;
+  top: 5%;
   right: 1%;
   padding: 2px;
   background-color: rgb(255, 255, 255);
@@ -44,7 +44,7 @@ body {
 }
 #cog-box4 {
   position: absolute;
-  top: 18%;
+  top: 10%;
   right: 1%;
   padding: 2px;
   background-color: rgb(255, 255, 255);
@@ -52,7 +52,7 @@ body {
 }
 #cog-box5 {
   position: absolute;
-  top: 23%;
+  top: 15%;
   right: 1%;
   padding: 2px;
   background-color: rgb(255, 255, 255);
@@ -95,8 +95,8 @@ body {
   position: absolute;
   display: none;
 
-  top: 18%;
-  right: 5%;
+  top: 15%;
+  right: 4%;
 }
 /* .option {
   margin: 3px;
